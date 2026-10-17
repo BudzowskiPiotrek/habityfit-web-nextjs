@@ -17,5 +17,5 @@ export function useAuthActions() {
 }
 
 export function useAuth() {
-  return { ...AuthActionsContext, ...AuthStateContext };
+  return { ...useAuthState(), ...useAuthActions() };
 }

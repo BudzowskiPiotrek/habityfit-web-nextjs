@@ -4,6 +4,7 @@ import {
   createContext,
   ReactNode,
   useCallback,
+  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -14,15 +15,24 @@ import { loginRequest } from "../api/auth.api";
 export const AuthStateContext = createContext<AuthState | null>(null);
 export const AuthActionsContext = createContext<AuthActions | null>(null);
 
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<AuthState>(() => {
-    const saved = authStorage.load();
+const initialState: AuthState = {
+  user: null,
+  token: null,
+  status: "loading",
+};
 
-    if (saved) {
-      return { user: saved.user, token: saved.token, status: "authenticated" };
-    }
-    return { user: null, token: null, status: "unauthenticated" };
-  });
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const [state, setState] = useState<AuthState>(initialState);
+
+  useEffect(() => {
+    const saved = authStorage.load();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setState(
+      saved
+        ? { user: saved.user, token: saved.token, status: "authenticated" }
+        : { user: null, token: null, status: "unauthenticated" },
+    );
+  }, []);
 
   const login = useCallback(async (credential: Credentials) => {
     const { token, user } = await loginRequest(credential);

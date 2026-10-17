@@ -5,10 +5,14 @@ const USER_KEY = "user";
 
 export const authStorage = {
   save(token: string, user: User) {
-    localStorage.setItem(TOKEN_KEY, token);
-    localStorage.setItem(USER_KEY, JSON.stringify(user));
+    try {
+      localStorage.setItem(TOKEN_KEY, token);
+      localStorage.setItem(USER_KEY, JSON.stringify(user));
+    } catch {}
   },
   load(): { token: string; user: User } | null {
+    if (typeof window === "undefined") return null;
+
     const token = localStorage.getItem(TOKEN_KEY);
     const rawUser = localStorage.getItem(USER_KEY);
 
@@ -21,7 +25,9 @@ export const authStorage = {
     }
   },
   clear() {
-    localStorage.removeItem(TOKEN_KEY);
-    localStorage.removeItem(USER_KEY);
+    try {
+      localStorage.removeItem(TOKEN_KEY);
+      localStorage.removeItem(USER_KEY);
+    } catch {}
   },
 };
