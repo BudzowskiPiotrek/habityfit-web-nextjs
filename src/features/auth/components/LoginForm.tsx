@@ -7,7 +7,11 @@ export function LoginForm() {
   const form = useLoginForm();
 
   return (
-    <form onSubmit={form.onSubmit} noValidate className="">
+    <form
+      onSubmit={form.onSubmit}
+      noValidate
+      className="flex flex-col w-full gap-4 p-2"
+    >
       <Field
         label="Email"
         type="email"
@@ -26,7 +30,7 @@ export function LoginForm() {
       />
 
       {form.submitError && (
-        <p role="alert" className="">
+        <p role="alert" className="text-sm text-red-500">
           {form.submitError}
         </p>
       )}
