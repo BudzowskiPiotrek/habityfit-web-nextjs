@@ -8,9 +8,11 @@ interface ButtonProps extends ComponentProps<"button"> {
 }
 
 const variants: Record<Variant, string> = {
-  primary: "",
-  secondary: "",
-  danger: "",
+  primary:
+    "bg-zinc-900 text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300",
+  secondary:
+    "border border-zinc-300 hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800",
+  danger: "bg-red-600 text-white hover:bg-red-500",
 };
 
 export function Button({
@@ -24,7 +26,9 @@ export function Button({
   return (
     <button
       disabled={loading || disabled}
-      className={`
+      className={`inline-flex items-center justify-center rounded-lg px-4 py-2 
+        text-sm font-medium transition
+        disabled:cursor-not-allowed disabled:opacity-60
             ${variants[variant]} ${className}`}
       {...props}
     >
