@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { CvView } from "@/features/cv";
+import { cvMock } from "@/features/cv/data/cv.mock";
 
 export const metadata: Metadata = {
   title: "CV & Experiencia",
   description:
-    "Trayectoria profesional, métricas de impacto y recomendación de desarrollo de software.",
+    "Trayectoria profesional, cvs y recomendación de desarrollo de software.",
 };
 
 export default function CvPage() {
-  return <CvView />;
+  return <CvView content={cvMock} />;
 }
