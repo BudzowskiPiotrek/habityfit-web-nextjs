@@ -9,14 +9,7 @@ export const publicNavigation: SidebarItem[] = [
   {
     label: "Cómo se creo esta Web",
     icon: "",
-    href: "/videos",
-    enabled: false,
-  },
-  {
-    label: "Git y repositorios",
-    icon: "",
-    href: "/git",
-    enabled: false,
+    href: "/nextjs",
   },
   {
     label: "Sobre HabityFit App",
@@ -25,20 +18,24 @@ export const publicNavigation: SidebarItem[] = [
     enabled: false,
   },
   {
+    label: "Videos sobre .Net",
+    icon: "",
+    href: "/dotnet",
+  },
+  {
+    label: "Videos sobre Docker",
+    icon: "",
+    href: "/docker",
+  },
+  {
+    label: "Git y repositorios",
+    icon: "",
+    href: "/git",
+    enabled: false,
+  },
+  {
     label: "CV & Experiencia",
     icon: "",
     href: "/cv",
-  },
-  {
-    label: "Sobre mí",
-    icon: "",
-    href: "/about",
-    enabled: false,
-  },
-  {
-    label: "Contacto",
-    icon: "",
-    href: "/contact",
-    enabled: false,
   },
 ];
