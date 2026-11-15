@@ -1,6 +1,5 @@
+import { LoadingState } from "@/shared/components/LoadingState";
 import type { Metadata } from "next";
-import { CvView } from "@/features/cv";
-import { cvMock } from "@/features/cv/data/cv.mock";
 
 export const metadata: Metadata = {
   title: "CV & Experiencia",
@@ -9,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function CvPage() {
-  return <CvView content={cvMock} />;
+  return <LoadingState />;
 }
