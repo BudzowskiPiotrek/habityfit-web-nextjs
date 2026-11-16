@@ -1,12 +1,5 @@
 export type WorkMode = "remote" | "hybrid" | "onsite";
 
-export type EmploymentType =
-  | "full-time"
-  | "part-time"
-  | "contract"
-  | "freelance"
-  | "internship";
-
 export interface CvLinks {
   github?: string;
   linkedin?: string;
@@ -28,7 +21,7 @@ export interface CvExperience {
   id: number;
   companyName: string;
   location: string;
-  employmentType: EmploymentType;
+  employmentType: number;
   role: string;
   startDate: string;
   endDate?: string;

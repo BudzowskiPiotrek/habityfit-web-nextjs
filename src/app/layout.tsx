@@ -4,9 +4,9 @@ import { AppProviders } from "@/providers/AppProviders";
 import { themeScript } from "@/shared/theme/lib/themeScript";
 
 export const metadata: Metadata = {
-  title: "HabityFit",
+  title: "Piotrek · piobudev · Desarrollador .NET | Portfolio & HabityFit",
   description:
-    "Portfolio de desarrollo de software y dashboard de entrenamiento HabityFit.",
+    "Desarrollador .NET en Málaga. Portfolio, diario de desarrollo en vídeo y HabityFit, mi app de entrenamiento.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

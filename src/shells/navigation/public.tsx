@@ -2,40 +2,29 @@ import { SidebarItem } from "@/shared/sidebar";
 
 export const publicNavigation: SidebarItem[] = [
   {
-    label: "Iniciar sesión",
+    label: "CV y experiencia",
     icon: "",
-    href: "/login",
+    href: "/cv",
   },
+  // { label: "HabityFit (mi app)", icon: "", href: "/habityfit", enabled: false },
   {
-    label: "Cómo se creo esta Web",
-    icon: "",
-    href: "/nextjs",
-  },
-  {
-    label: "Sobre HabityFit App",
-    icon: "",
-    href: "/habityfit",
-    enabled: false,
-  },
-  {
-    label: "Videos sobre .Net",
+    label: "Backend .NET",
     icon: "",
     href: "/dotnet",
   },
   {
-    label: "Videos sobre Docker",
+    label: "Docker e infraestructura",
     icon: "",
     href: "/docker",
   },
   {
-    label: "Git y repositorios",
+    label: "Esta web, paso a paso",
     icon: "",
-    href: "/git",
-    enabled: false,
+    href: "/nextjs",
   },
   {
-    label: "CV & Experiencia",
+    label: "Iniciar sesión",
     icon: "",
-    href: "/cv",
+    href: "/login",
   },
 ];

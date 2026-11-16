@@ -1,11 +1,7 @@
 import type { CvExperience } from "../../types/cv.types";
 import { employmentTypeLabels, formatDateRange } from "../../lib/cv.format";
 
-export function CvExperienceCard({
-  experience,
-}: {
-  experience: CvExperience;
-}) {
+export function CvExperienceCard({ experience }: { experience: CvExperience }) {
   const {
     companyName,
     location,
@@ -45,7 +41,7 @@ export function CvExperienceCard({
         </p>
       </div>
 
-      <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+      <p className="text-justify text-sm leading-6 text-zinc-600 dark:text-zinc-400">
         {shortSummary}
       </p>
 

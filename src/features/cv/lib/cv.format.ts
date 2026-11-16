@@ -1,5 +1,3 @@
-import type { EmploymentType } from "../types/cv.types";
-
 const MONTHS = [
   "Ene",
   "Feb",
@@ -30,10 +28,10 @@ export function formatDateRange(
   return `${formatCvDate(startDate)} - ${end}`;
 }
 
-export const employmentTypeLabels: Record<EmploymentType, string> = {
-  "full-time": "Jornada completa",
-  "part-time": "Media jornada",
-  contract: "Contrato",
-  freelance: "Freelance",
-  internship: "Prácticas",
+export const employmentTypeLabels: Record<number, string> = {
+  1: "Jornada completa",
+  2: "Media jornada",
+  3: "Contrato",
+  4: "Prácticas",
+  5: "Freelance",
 };

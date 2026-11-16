@@ -1,3 +1,5 @@
+export { getCvContent } from "./api/cv.api";
+export { useCv } from "./hooks/useCv";
 export { CvView } from "./components/CvView";
 export { CvExperienceCard } from "./components/experience/CvExperienceCard";
 export type {
@@ -5,6 +7,5 @@ export type {
   CvExperience,
   CvLinks,
   CvProfile,
-  EmploymentType,
   WorkMode,
 } from "./types/cv.types";
